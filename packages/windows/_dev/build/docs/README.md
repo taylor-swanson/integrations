@@ -70,6 +70,8 @@ The Windows `powershell_operational` dataset provides events from the Windows
 The Windows `sysmon_operational` dataset provides events from the Windows
 `Microsoft-Windows-Sysmon/Operational` event log.
 
+The syslog input may be used to gather Sysmon events from Linux instances.
+
 {{event "sysmon_operational"}}
 
 {{fields "sysmon_operational"}}

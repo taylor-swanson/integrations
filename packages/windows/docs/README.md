@@ -804,6 +804,8 @@ An example event for `powershell_operational` looks as following:
 The Windows `sysmon_operational` dataset provides events from the Windows
 `Microsoft-Windows-Sysmon/Operational` event log.
 
+The syslog input may be used to gather Sysmon events from Linux instances.
+
 An example event for `sysmon_operational` looks as following:
 
 ```json

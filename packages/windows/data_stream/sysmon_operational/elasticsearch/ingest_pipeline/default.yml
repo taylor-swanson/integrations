@@ -1238,7 +1238,7 @@ processors:
   - script:
       description: Remove all empty values from event_data.
       lang: painless
-      source: ctx?.winlog?.event_data?.entrySet().removeIf(entry -> entry.getValue() == null || entry.getValue().equals("") || entry.getValue().equals("-"));
+      source: ctx?.winlog?.event_data?.entrySet()?.removeIf(entry -> entry.getValue() == null || entry.getValue().equals("") || entry.getValue().equals("-"));
   - remove:
       description: Remove empty event data.
       field: winlog.event_data

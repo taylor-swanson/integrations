@@ -1,0 +1,25 @@
+name: Sysmon-Linux
+condition: ${host.platform} == 'linux'
+protocol.udp:
+  host: "{{syslog_host}}:{{syslog_port}}"
+{{#if tags.length}}
+tags:
+{{else if preserve_original_event}}
+tags:
+{{/if}}
+{{#each tags as |tag i|}}
+  - {{tag}}
+{{/each}}
+{{#if preserve_original_event}}
+  - preserve_original_event
+{{/if}}
+processors:
+- decode_xml_wineventlog:
+    field: message
+    target_field: winlog
+    ignore_missing: true
+    ignore_failure: true
+    map_ecs_fields: true
+{{#if processors.length}}
+{{processors}}
+{{/if}}

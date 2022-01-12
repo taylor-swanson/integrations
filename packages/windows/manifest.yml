@@ -1,6 +1,6 @@
 name: windows
 title: Windows
-version: 1.6.0
+version: 1.7.0
 description: Collect logs and metrics from Windows OS and services with Elastic Agent.
 type: integration
 categories:
@@ -29,6 +29,9 @@ policy_templates:
       - type: winlog
         title: 'Collect events from the following Windows event log channels:'
         description: 'Collecting events from Windows event log'
+      - type: syslog
+        title: Collect events from Linux instances
+        description: Collecting events from Linux instances
       - type: windows/metrics
         title: Collect Windows perfmon and service metrics
         description: Collecting perfmon and service metrics from Windows instances
