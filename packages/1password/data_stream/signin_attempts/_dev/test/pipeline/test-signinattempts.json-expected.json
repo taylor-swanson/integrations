@@ -16,7 +16,7 @@
             },
             "@timestamp": "2021-08-11T14:28:03.000Z",
             "ecs": {
-                "version": "8.0.0"
+                "version": "8.2.0"
             },
             "related": {
                 "user": [
@@ -92,7 +92,7 @@
             },
             "@timestamp": "2021-08-11T15:04:22.000Z",
             "ecs": {
-                "version": "8.0.0"
+                "version": "8.2.0"
             },
             "related": {
                 "user": [
