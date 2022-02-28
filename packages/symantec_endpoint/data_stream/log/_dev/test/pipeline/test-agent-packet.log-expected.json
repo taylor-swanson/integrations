@@ -34,7 +34,7 @@
                 "direction": "egress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "related": {
                 "ip": [

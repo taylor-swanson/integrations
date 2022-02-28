@@ -2,7 +2,7 @@
     "expected": [
         {
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "host": {
                 "name": "_destinationHostname",
@@ -55,7 +55,7 @@
         },
         {
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "host": {
                 "name": "IBV-HQ-L12",

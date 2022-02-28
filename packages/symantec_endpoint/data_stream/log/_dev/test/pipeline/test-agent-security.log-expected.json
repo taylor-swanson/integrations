@@ -32,7 +32,7 @@
                 "direction": "ingress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "related": {
                 "hash": [
@@ -129,7 +129,7 @@
                 "direction": "ingress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "related": {
                 "ip": [
@@ -210,7 +210,7 @@
                 "direction": "ingress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "host": {
                 "name": "server03",
@@ -319,7 +319,7 @@
                 "direction": "ingress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "related": {
                 "hash": [
@@ -424,7 +424,7 @@
                 "direction": "ingress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "related": {
                 "ip": [
@@ -518,7 +518,7 @@
                 "direction": "egress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "related": {
                 "hash": [

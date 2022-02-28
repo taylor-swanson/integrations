@@ -44,7 +44,7 @@
                 "direction": "egress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "related": {
                 "hash": [
@@ -135,7 +135,7 @@
                 "direction": "ingress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "host": {
                 "name": "server05",
@@ -242,7 +242,7 @@
                 "direction": "ingress"
             },
             "ecs": {
-                "version": "1.12.0"
+                "version": "8.2.0"
             },
             "related": {
                 "hash": [
