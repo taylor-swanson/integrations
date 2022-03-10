@@ -14,7 +14,7 @@
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "1e76e2b6-7664-4905-9a0b-11e1d4dc6fa9",

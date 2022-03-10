@@ -34,7 +34,7 @@ An example event for `audit_events` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "1e76e2b6-7664-4905-9a0b-11e1d4dc6fa9",
@@ -110,10 +110,10 @@ An example event for `audit_events` looks as following:
 | data_stream.namespace | Data stream namespace. | constant_keyword |
 | data_stream.type | Data stream type. | constant_keyword |
 | ecs.version | ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events. | keyword |
-| email.from.address | Stores the from email address from the RFC5322 From - header field. | keyword |
-| email.origination_timestamp | The date and time the email message was composed. Many email clients will fill this in automatically when the message is sent by a user. | date |
-| email.subject | A brief summary of the topic of the message | keyword |
-| email.to.address | The email address(es) of the message recipient(s) | keyword |
+| email.from.address | The email address of the sender, typically from the RFC 5322 `From:` header field. | keyword |
+| email.origination_timestamp | The date and time the email message was composed. Many email clients will fill in this value automatically when the message is sent by a user. | date |
+| email.subject | A brief summary of the topic of the message. | keyword |
+| email.to.address | The email address of recipient | keyword |
 | event.action | The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer. | keyword |
 | event.dataset | Event dataset | constant_keyword |
 | event.id | Unique ID to describe the event. | keyword |
@@ -178,7 +178,7 @@ An example event for `dlp` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "1e76e2b6-7664-4905-9a0b-11e1d4dc6fa9",
@@ -240,11 +240,11 @@ An example event for `dlp` looks as following:
 | data_stream.namespace | Data stream namespace. | constant_keyword |
 | data_stream.type | Data stream type. | constant_keyword |
 | ecs.version | ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events. | keyword |
-| email.direction | Direction of the message based on the sending and receiving domains | keyword |
-| email.from.address | Stores the from email address from the RFC5322 From - header field. | keyword |
-| email.message_id | Identifier from the RFC5322 Message-ID - header field that refers to a particular version of a particular message. | wildcard |
-| email.subject | A brief summary of the topic of the message | keyword |
-| email.to.address | The email address(es) of the message recipient(s) | keyword |
+| email.direction | The direction of the message based on the sending and receiving domains. | keyword |
+| email.from.address | The email address of the sender, typically from the RFC 5322 `From:` header field. | keyword |
+| email.message_id | Identifier from the RFC 5322 `Message-ID:` email header that refers to a particular email message. | wildcard |
+| email.subject | A brief summary of the topic of the message. | keyword |
+| email.to.address | The email address of recipient | keyword |
 | event.action | The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer. | keyword |
 | event.dataset | Event dataset | constant_keyword |
 | event.module | Event module | constant_keyword |
@@ -300,7 +300,7 @@ An example event for `siem` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "15e6751a-71c9-4027-995c-58dcd862c21d",
@@ -365,20 +365,20 @@ An example event for `siem` looks as following:
 | data_stream.type | Data stream type. | constant_keyword |
 | ecs.version | ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events. | keyword |
 | email.attachments.file.extension | Attachment file extension, excluding the leading dot. | keyword |
-| email.attachments.file.mime_type | MIME type of the attachment file. | keyword |
+| email.attachments.file.mime_type | The MIME media type of the attachment. This value will typically be extracted from the `Content-Type` MIME header field. | keyword |
 | email.attachments.file.name | Name of the attachment file including the extension. | keyword |
 | email.attachments.file.size | Attachment file size in bytes. | long |
 | email.attachments.hash.md5 | MD5 hash of the file attachment. | keyword |
 | email.attachments.hash.sha1 | SHA-1 hash of the file attachment. | keyword |
 | email.attachments.hash.sha256 | SHA-256 hash of the file attachment. | keyword |
-| email.direction | Direction of the message based on the sending and receiving domains. | keyword |
-| email.from.address | Stores the from email address from the RFC5322 From - header field. | keyword |
+| email.direction | The direction of the message based on the sending and receiving domains. | keyword |
+| email.from.address | The email address of the sender, typically from the RFC 5322 `From:` header field. | keyword |
 | email.header_from | The sender address found in the from header of the email. | keyword |
-| email.local_id | Unique identifier given to the email by the source (MTA, gateway, etc.) that created the event and is not persistent across hops (for example, the X-MS-Exchange-Organization-Network-Message-Id id). | keyword |
-| email.message_id | Identifier from the RFC5322 Message-ID - header field that refers to a particular version of a particular message. | wildcard |
+| email.local_id | Unique identifier given to the email by the source that created the event. Identifier is not persistent across hops. | keyword |
+| email.message_id | Identifier from the RFC 5322 `Message-ID:` email header that refers to a particular email message. | wildcard |
 | email.message_size | The total size of the email.The total size of the email. | long |
-| email.subject | A brief summary of the topic of the message | keyword |
-| email.to.address | The email address(es) of the message recipient(s). | keyword |
+| email.subject | A brief summary of the topic of the message. | keyword |
+| email.to.address | The email address of recipient | keyword |
 | error.code | Error code describing the error. | keyword |
 | error.message | Error message. | match_only_text |
 | error.type | The type of the error, for example the class name of the exception. | keyword |
@@ -483,7 +483,7 @@ An example event for `ttp_ip` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "1e76e2b6-7664-4905-9a0b-11e1d4dc6fa9",
@@ -569,10 +569,10 @@ An example event for `ttp_ip` looks as following:
 | data_stream.namespace | Data stream namespace. | constant_keyword |
 | data_stream.type | Data stream type. | constant_keyword |
 | ecs.version | ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events. | keyword |
-| email.from.address | Stores the from email address from the RFC5322 From - header field. | keyword |
-| email.message_id | Identifier from the RFC5322 Message-ID - header field that refers to a particular version of a particular message. | wildcard |
-| email.subject | A brief summary of the topic of the message | keyword |
-| email.to.address | The email address(es) of the message recipient(s) | keyword |
+| email.from.address | The email address of the sender, typically from the RFC 5322 `From:` header field. | keyword |
+| email.message_id | Identifier from the RFC 5322 `Message-ID:` email header that refers to a particular email message. | wildcard |
+| email.subject | A brief summary of the topic of the message. | keyword |
+| email.to.address | The email address of recipient | keyword |
 | event.action | The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer. | keyword |
 | event.dataset | Event dataset | constant_keyword |
 | event.id | Unique ID to describe the event. | keyword |
@@ -642,7 +642,7 @@ An example event for `ttp_ap` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "1e76e2b6-7664-4905-9a0b-11e1d4dc6fa9",
@@ -722,14 +722,14 @@ An example event for `ttp_ap` looks as following:
 | data_stream.type | Data stream type. | constant_keyword |
 | ecs.version | ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events. | keyword |
 | email.attachments.file.extension | Attachment file extension, excluding the leading dot. | keyword |
-| email.attachments.file.mime_type | MIME type of the attachment file. | keyword |
-| email.attachments.file.name | Name of the attachment file including the extension. | keyword |
+| email.attachments.file.mime_type | The MIME media type of the attachment. This value will typically be extracted from the `Content-Type` MIME header field. | keyword |
+| email.attachments.file.name | Name of the attachment file including the file extension. | keyword |
 | email.attachments.hash | File hash. | keyword |
-| email.direction | Direction of the message based on the sending and receiving domains | keyword |
-| email.from.address | Stores the from email address from the RFC5322 From - header field. | keyword |
-| email.message_id | Identifier from the RFC5322 Message-ID - header field that refers to a particular version of a particular message. | wildcard |
-| email.subject | A brief summary of the topic of the message | keyword |
-| email.to.address | The email address(es) of the message recipient(s) | keyword |
+| email.direction | The direction of the message based on the sending and receiving domains. | keyword |
+| email.from.address | The email address of the sender, typically from the RFC 5322 `From:` header field. | keyword |
+| email.message_id | Identifier from the RFC 5322 `Message-ID:` email header that refers to a particular email message. | wildcard |
+| email.subject | A brief summary of the topic of the message. | keyword |
+| email.to.address | The email address of recipient | keyword |
 | event.action | The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer. | keyword |
 | event.dataset | Event dataset | constant_keyword |
 | event.module | Event module | constant_keyword |
@@ -792,7 +792,7 @@ An example event for `ttp_url` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "1e76e2b6-7664-4905-9a0b-11e1d4dc6fa9",
@@ -883,10 +883,10 @@ An example event for `ttp_url` looks as following:
 | data_stream.namespace | Data stream namespace. | constant_keyword |
 | data_stream.type | Data stream type. | constant_keyword |
 | ecs.version | ECS version this event conforms to. `ecs.version` is a required field and must exist in all events. When querying across multiple indices -- which may conform to slightly different ECS versions -- this field lets integrations adjust to the schema version of the events. | keyword |
-| email.direction | Direction of the message based on the sending and receiving domains | keyword |
-| email.from.address | Stores the from email address from the RFC5322 From - header field. | keyword |
-| email.message_id | Identifier from the RFC5322 Message-ID - header field that refers to a particular version of a particular message. | wildcard |
-| email.subject | A brief summary of the topic of the message | keyword |
+| email.direction | The direction of the message based on the sending and receiving domains. | keyword |
+| email.from.address | The email address of the sender, typically from the RFC 5322 `From:` header field. | keyword |
+| email.message_id | Identifier from the RFC 5322 `Message-ID:` email header that refers to a particular email message. | wildcard |
+| email.subject | A brief summary of the topic of the message. | keyword |
 | event.action | The action captured by the event. This describes the information in the event. It is more specific than `event.category`. Examples are `group-add`, `process-started`, `file-created`. The value is normally defined by the implementer. | keyword |
 | event.dataset | Event dataset | constant_keyword |
 | event.module | Event module | constant_keyword |
@@ -960,7 +960,7 @@ An example event for `threat_intel_malware_customer` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "1e76e2b6-7664-4905-9a0b-11e1d4dc6fa9",
@@ -1105,7 +1105,7 @@ An example event for `threat_intel_malware_grid` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.0.0"
+        "version": "8.2.0"
     },
     "elastic_agent": {
         "id": "1e76e2b6-7664-4905-9a0b-11e1d4dc6fa9",

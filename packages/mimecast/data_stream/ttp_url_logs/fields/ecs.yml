@@ -10,28 +10,13 @@
   name: event.action
 - external: ecs
   name: source.ip
-- description: Stores the from email address from the RFC5322 From - header field.
-  type: keyword
+- external: ecs
   name: email.from.address
-- description: A brief summary of the topic of the message
-  type: keyword
+- external: ecs
   name: email.subject
-  ignore_above: 1024
-  multi_fields:
-    - name: text
-      type: text
-      norms: false
-      default_field: false
-- description: Identifier from the RFC5322 Message-ID - header field that refers to a particular version of a particular message.
-  type: wildcard
+- external: ecs
   name: email.message_id
-  multi_fields:
-    - name: text
-      type: text
-      norms: false
-      default_field: false
-- description: Direction of the message based on the sending and receiving domains
-  type: keyword
+- external: ecs
   name: email.direction
 - external: ecs
   name: rule.name

@@ -46,23 +46,13 @@
   name: client.as.number
 - external: ecs
   name: client.as.organization.name
-- description: The email address(es) of the message recipient(s)
-  type: keyword
+- external: ecs
   name: email.to.address
-- description: Stores the from email address from the RFC5322 From - header field.
-  type: keyword
+- external: ecs
   name: email.from.address
-- description: A brief summary of the topic of the message
-  type: keyword
+- external: ecs
   name: email.subject
-  ignore_above: 1024
-  multi_fields:
-    - name: text
-      type: text
-      norms: false
-      default_field: false
-- description: The date and time the email message was composed. Many email clients will fill this in automatically when the message is sent by a user.
-  type: date
+- external: ecs
   name: email.origination_timestamp
 - external: ecs
   name: file.size
