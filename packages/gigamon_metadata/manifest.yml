@@ -1,0 +1,38 @@
+format_version: 2.0.0
+name: gigamon_metadata
+title: "Gigamon Metadata"
+version: 0.0.10
+source:
+  license: "Elastic-2.0"
+description: "Collect metadata logs from Gigamon Metadata with Elastic Agent."
+type: integration
+categories:
+  - monitoring
+  - network
+  - security
+conditions:
+  kibana.version: "^8.5.1"
+  elastic.subscription: "basic"
+screenshots:
+  - src: /img/sample-screenshot.png
+    title: Sample screenshot
+    size: 600x600
+    type: image/png
+icons:
+  - src: /img/sample-logo.svg
+    title: Sample logo
+    size: 32x32
+    type: image/svg+xml
+policy_templates:
+  - name: gigamon
+    title: "Gigamon Metadata Logs"
+    description: "Collecting metadata logs from Gigamon Metadata"
+    inputs:
+      - type: tcp
+        title: "Collect metadata logs over TCP"
+        description: "Collecting metadata logs from Gigamon Metadata (input: tcp)."
+      - type: udp
+        title: "Collect metadata logs over UDP"
+        description: "Collecting metadata logs from Gigamon Metadata (input: udp)."
+owner:
+  github: elastic/security-external-integrations
