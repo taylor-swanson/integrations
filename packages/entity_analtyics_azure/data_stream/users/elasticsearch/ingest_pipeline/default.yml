@@ -1,0 +1,85 @@
+---
+description: Pipeline for processing Azure AD user entities.
+processors:
+- set:
+    field: ecs.version
+    value: "8.5.0"
+
+# Event properties.
+- set:
+    field: event.kind
+    value: "state"
+- set:
+    field: event.provider
+    value: "Azure AD"
+- set:
+    field: event.type
+    value: "user"
+
+# User properties.
+- rename:
+    field: azure_ad.mail
+    target_field: user.email
+    ignore_missing: true
+- append:
+    field: user.name
+    value: "{{{azure_ad.userPrincipalName}}}"
+    allow_duplicates: false
+    if: ctx.azure_ad?.userPrincipalName != null
+- rename:
+    field: azure_ad.displayName
+    target_field: user.full_name
+    ignore_missing: true
+- rename:
+    field: azure_ad.givenName
+    target_field: user.first_name
+    ignore_missing: true
+- rename:
+    field: azure_ad.surname
+    target_field: user.last_name
+    ignore_missing: true
+- rename:
+    field: azure_ad.accountEnabled
+    target_field: user.enabled
+    ignore_missing: true
+- append:
+    field: user.phone
+    value: "{{{azure_ad.mobilePhone}}}"
+    allow_duplicates: false
+    if: ctx.azure_ad?.mobilePhone != null
+- append:
+    field: user.phone
+    value: "{{{azure_ad.businessPhones}}}"
+    allow_duplicates: false
+    if: ctx.azure_ad?.businessPhones instanceof String
+- foreach:
+    field: azure_ad.businessPhones
+    if: ctx.azure_ad?.businessPhones instanceof List
+    processor:
+      append:
+        field: user.phone
+        value: "{{{_ingest._value}}}"
+        allow_duplicates: false
+- rename:
+    field: azure_ad.jobTitle
+    target_field: user.job_title
+    ignore_missing: true
+- rename:
+    field: azure_ad.officeLocation
+    target_field: user.work.location
+    ignore_missing: true
+
+- remove:
+    field:
+      - azure_ad
+- remove:
+    field: event.original
+    if: "ctx?.tags == null || !(ctx.tags.contains('preserve_original_event'))"
+    ignore_failure: true
+    ignore_missing: true
+
+on_failure:
+- set:
+    field: error.message
+    value: |-
+      Processor "{{ _ingest.on_failure_processor_type }}" with tag "{{ _ingest.on_failure_processor_tag }}" in pipeline "{{ _ingest.on_failure_pipeline }}" failed with message "{{ _ingest.on_failure_message }}"

@@ -1,0 +1,46 @@
+title: "User Identities"
+type: logs
+streams:
+  - input: entity-analytics
+    title: Collect user identities
+    description: Collecting identities from Azure AD
+    vars:
+      - name: tenant_id
+        type: text
+        title: Tenant ID
+        required: true
+      - name: client_id
+        type: text
+        title: Client (Application) ID
+        required: true
+      - name: secret
+        type: password
+        title: Secret (API Key)
+        required: true
+      - name: sync_interval
+        type: text
+        title: Sync Interval
+        description: How often full synchronizations should occur. Expected value is a duration string (15m, 1h, 1m30, etc).
+        required: false
+        show_user: false
+      - name: update_interval
+        type: text
+        title: Sync Interval
+        description: How often incremental updates should occur. Must be less than Sync Interval. Expected value is a duration string (15m, 1h, 1m30, etc).
+        required: false
+        show_user: false
+      - name: login_url
+        type: text
+        title: Login URL
+        default: "https://login.microsoftonline.com"
+        description: URL for OAuth2 logins.
+        required: false
+        show_user: false
+      - name: login_scopes
+        type: text
+        title: Login Scopes
+        default:
+          - "https://graph.microsoft.com/.default"
+        description: Scopes for OAuth2 token.
+        required: false
+        show_user: false
