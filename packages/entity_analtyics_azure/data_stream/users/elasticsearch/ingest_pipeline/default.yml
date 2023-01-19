@@ -72,6 +72,7 @@ processors:
 - remove:
     field:
       - azure_ad
+    ignore_missing: true
 - remove:
     field: event.original
     if: "ctx?.tags == null || !(ctx.tags.contains('preserve_original_event'))"

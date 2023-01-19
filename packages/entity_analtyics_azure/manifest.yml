@@ -11,7 +11,7 @@ categories:
   - cloud
   - security
 conditions:
-  kibana.version: "^8.6.0" # FIXME: Change to 8.7.0
+  kibana.version: "^8.7.0"
   elastic.subscription: "basic"
 screenshots:
   - src: /img/sample-screenshot.png
