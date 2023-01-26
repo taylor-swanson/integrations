@@ -7,14 +7,17 @@ processors:
 
 # Event properties.
 - set:
-    field: event.kind
-    value: "state"
-- set:
     field: event.provider
     value: "Azure AD"
 - set:
+    field: event.kind
+    value: "asset"
+- set:
+    field: event.category
+    value: "iam"
+- set:
     field: event.type
-    value: "user"
+    value: ["user", "info"]
 
 # User properties.
 - rename:
