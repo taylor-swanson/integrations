@@ -1,7 +1,7 @@
 format_version: 2.0.0
 name: ea_azure
 title: "Azure AD Entity Analytics"
-version: 0.0.1
+version: 0.0.0-next
 source:
   license: "Elastic-2.0"
 description: "Collect user identities from Azure AD with Elastic Agent."
@@ -28,7 +28,7 @@ policy_templates:
     title: User Identities
     description: Collect user identities
     inputs:
-      - type: ea_azure
+      - type: entity-analytics
         title: Collect user identities
         description: Collecting identities from Azure AD
 owner:
