@@ -4,6 +4,7 @@ streams:
   - input: entity-analytics
     title: Collect user identities
     description: Collecting identities from Azure AD
+    template_path: entity-analytics.yml.hbs
     vars:
       - name: tenant_id
         type: text
@@ -25,7 +26,7 @@ streams:
         show_user: false
       - name: update_interval
         type: text
-        title: Sync Interval
+        title: Update Interval
         description: How often incremental updates should occur. Must be less than Sync Interval. Expected value is a duration string (15m, 1h, 1m30, etc).
         required: false
         show_user: false

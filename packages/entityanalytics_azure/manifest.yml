@@ -1,7 +1,7 @@
 format_version: 2.0.0
-name: ea_azure
+name: entityanalytics_azure
 title: "Azure AD Entity Analytics"
-version: 0.0.0-next
+version: 1.0.2-next
 source:
   license: "Elastic-2.0"
 description: "Collect user identities from Azure AD with Elastic Agent."
@@ -13,6 +13,7 @@ categories:
 conditions:
   kibana.version: "^8.7.0"
   elastic.subscription: "basic"
+release: experimental
 screenshots:
   - src: /img/sample-screenshot.png
     title: Sample screenshot
