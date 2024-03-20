@@ -1,0 +1,1390 @@
+{
+    "expected": [
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"PKI SEARCH scope=local type=ca\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "PKI SEARCH scope=local type=ca",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"PKI SEARCH scope=local type=server\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "PKI SEARCH scope=local type=server",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"PKI SEARCH scope=local type=user\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "PKI SEARCH scope=local type=user",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG ACTIVATE cancelall\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG ACTIVATE cancelall",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"LOG PROPERTY\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "LOG PROPERTY",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG LOG SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG LOG SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG COMMUNICATION IPFIX SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG COMMUNICATION IPFIX SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG COMMUNICATION SYSLOG PROFILE SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG COMMUNICATION SYSLOG PROFILE SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" pri=5 confid=00 slotlevel=0 ruleid=4 srcif=\"Ethernet0\" srcifname=\"out\" ipproto=tcp proto=ssl version=TLSv1.3 src=192.168.197.1 srcport=61549 srcportname=ad2008-dyn_tcp srcmac=00:50:56:c0:00:08 dst=192.168.197.134 dstport=443 dstportname=https dstname=Firewall_out modsrc=192.168.197.1 modsrcport=61549 origdst=192.168.197.134 origdstport=443 ipv=4 sent=605 rcvd=3614 duration=0.01 action=pass logtype=\"connection\""
+            },
+            "stormshield": {
+                "action": "pass",
+                "confid": "00",
+                "dst": "192.168.197.134",
+                "dstname": "Firewall_out",
+                "dstport": "443",
+                "dstportname": "https",
+                "duration": "0.01",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "ipproto": "tcp",
+                "ipv": "4",
+                "modsrc": "192.168.197.1",
+                "modsrcport": "61549",
+                "origdst": "192.168.197.134",
+                "origdstport": "443",
+                "pri": "5",
+                "proto": "ssl",
+                "rcvd": "3614",
+                "ruleid": "4",
+                "sent": "605",
+                "slotlevel": "0",
+                "src": "192.168.197.1",
+                "srcif": "Ethernet0",
+                "srcifname": "out",
+                "srcmac": "00:50:56:c0:00:08",
+                "srcport": "61549",
+                "srcportname": "ad2008-dyn_tcp",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "version": "TLSv1.3"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"SYSTEM LOGDISK STATE\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "SYSTEM LOGDISK STATE",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"SYSTEM LOGDISK LIST\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "SYSTEM LOGDISK LIST",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG COMMUNICATION SYSLOG PROFILE SHOW index=0\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG COMMUNICATION SYSLOG PROFILE SHOW index=0",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" pri=5 confid=00 slotlevel=0 ruleid=4 srcif=\"Ethernet0\" srcifname=\"out\" ipproto=tcp proto=ssl version=TLSv1.3 src=192.168.197.1 srcport=61548 srcportname=ad2008-dyn_tcp srcmac=00:50:56:c0:00:08 dst=192.168.197.134 dstport=443 dstportname=https dstname=Firewall_out modsrc=192.168.197.1 modsrcport=61548 origdst=192.168.197.134 origdstport=443 ipv=4 sent=573 rcvd=3614 duration=0.32 action=pass logtype=\"connection\""
+            },
+            "stormshield": {
+                "action": "pass",
+                "confid": "00",
+                "dst": "192.168.197.134",
+                "dstname": "Firewall_out",
+                "dstport": "443",
+                "dstportname": "https",
+                "duration": "0.32",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "ipproto": "tcp",
+                "ipv": "4",
+                "modsrc": "192.168.197.1",
+                "modsrcport": "61548",
+                "origdst": "192.168.197.134",
+                "origdstport": "443",
+                "pri": "5",
+                "proto": "ssl",
+                "rcvd": "3614",
+                "ruleid": "4",
+                "sent": "573",
+                "slotlevel": "0",
+                "src": "192.168.197.1",
+                "srcif": "Ethernet0",
+                "srcifname": "out",
+                "srcmac": "00:50:56:c0:00:08",
+                "srcport": "61548",
+                "srcportname": "ad2008-dyn_tcp",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "version": "TLSv1.3"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" pri=5 confid=00 slotlevel=0 ruleid=4 srcif=\"Ethernet0\" srcifname=\"out\" ipproto=tcp proto=ssl version=TLSv1.3 src=192.168.197.1 srcport=61550 srcportname=ad2008-dyn_tcp srcmac=00:50:56:c0:00:08 dst=192.168.197.134 dstport=443 dstportname=https dstname=Firewall_out modsrc=192.168.197.1 modsrcport=61550 origdst=192.168.197.134 origdstport=443 ipv=4 sent=605 rcvd=3614 duration=0.32 action=pass logtype=\"connection\""
+            },
+            "stormshield": {
+                "action": "pass",
+                "confid": "00",
+                "dst": "192.168.197.134",
+                "dstname": "Firewall_out",
+                "dstport": "443",
+                "dstportname": "https",
+                "duration": "0.32",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "ipproto": "tcp",
+                "ipv": "4",
+                "modsrc": "192.168.197.1",
+                "modsrcport": "61550",
+                "origdst": "192.168.197.134",
+                "origdstport": "443",
+                "pri": "5",
+                "proto": "ssl",
+                "rcvd": "3614",
+                "ruleid": "4",
+                "sent": "605",
+                "slotlevel": "0",
+                "src": "192.168.197.1",
+                "srcif": "Ethernet0",
+                "srcifname": "out",
+                "srcmac": "00:50:56:c0:00:08",
+                "srcport": "61550",
+                "srcportname": "ad2008-dyn_tcp",
+                "startime": "2024-03-08 10:14:08",
+                "time": "2024-03-08 10:14:08",
+                "tz": "+0000",
+                "version": "TLSv1.3"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:09\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:12:09\" pri=5 confid=01 slotlevel=0 ruleid=7 ipproto=udp dstif=\"Ethernet1\" dstifname=\"in\" proto=bootps src=192.168.236.131 srcport=68 srcportname=bootpc srcname=Firewall_in dst=192.168.236.254 dstport=67 dstportname=bootps modsrc=192.168.236.131 modsrcport=68 origdst=192.168.236.254 origdstport=67 ipv=4 sent=300 rcvd=300 duration=0.00 action=pass logtype=\"connection\""
+            },
+            "stormshield": {
+                "action": "pass",
+                "confid": "01",
+                "dst": "192.168.236.254",
+                "dstif": "Ethernet1",
+                "dstifname": "in",
+                "dstport": "67",
+                "dstportname": "bootps",
+                "duration": "0.00",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "ipproto": "udp",
+                "ipv": "4",
+                "modsrc": "192.168.236.131",
+                "modsrcport": "68",
+                "origdst": "192.168.236.254",
+                "origdstport": "67",
+                "pri": "5",
+                "proto": "bootps",
+                "rcvd": "300",
+                "ruleid": "7",
+                "sent": "300",
+                "slotlevel": "0",
+                "src": "192.168.236.131",
+                "srcname": "Firewall_in",
+                "srcport": "68",
+                "srcportname": "bootpc",
+                "startime": "2024-03-08 10:12:09",
+                "time": "2024-03-08 10:14:09",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG ACTIVATE cancelall\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG ACTIVATE cancelall",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"SYSTEM IDENT\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "SYSTEM IDENT",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"SYSTEM LANGUAGE\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "SYSTEM LANGUAGE",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG PASSWDPOLICY SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG PASSWDPOLICY SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG SSH SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG SSH SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"PKI CONFIG SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "PKI CONFIG SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG COMMUNICATION SHOW HTTPPROXY\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG COMMUNICATION SHOW HTTPPROXY",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG DNS SERVER LIST\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG DNS SERVER LIST",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG WEBADMIN SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG WEBADMIN SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG WEBADMIN ACCESS SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG WEBADMIN ACCESS SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG NTP STATE\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG NTP STATE",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG NTP SERVER LIST\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG NTP SERVER LIST",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG NTP KEY LIST\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG NTP KEY LIST",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG TELEMETRY SHOW\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG TELEMETRY SHOW",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"SYSTEM TIMEZONE LIST\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "SYSTEM TIMEZONE LIST",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"SYSTEM TIMEZONE GET\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "SYSTEM TIMEZONE GET",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:11\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:11\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"SYSTEM DATE\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "SYSTEM DATE",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:11",
+                "time": "2024-03-08 10:14:11",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:21\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:21\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG NTP STATE on\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG NTP STATE on",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:21",
+                "time": "2024-03-08 10:14:21",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 10:14:23\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:23\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG NTP ACTIVATE\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG NTP ACTIVATE",
+                "sessionid": "1",
+                "startime": "2024-03-08 10:14:23",
+                "time": "2024-03-08 10:14:23",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:34\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:34\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG OBJECT GET type=host name=dns1.google.com\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG OBJECT GET type=host name=dns1.google.com",
+                "sessionid": "1",
+                "startime": "2024-03-08 15:14:34",
+                "time": "2024-03-08 15:14:34",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:35\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:35\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG OBJECT GET type=host name=dns2.google.com\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG OBJECT GET type=host name=dns2.google.com",
+                "sessionid": "1",
+                "startime": "2024-03-08 15:14:35",
+                "time": "2024-03-08 15:14:35",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:36\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:36\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG DNS SERVER REMOVE dns2.google.com\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG DNS SERVER REMOVE dns2.google.com",
+                "sessionid": "1",
+                "startime": "2024-03-08 15:14:36",
+                "time": "2024-03-08 15:14:36",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:41\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:41\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG OBJECT LIST TYPE=host havingIpVersion=any start=0 limit=100 search=*1.1.1.1*\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG OBJECT LIST TYPE=host havingIpVersion=any start=0 limit=100 search=*1.1.1.1*",
+                "sessionid": "1",
+                "startime": "2024-03-08 15:14:41",
+                "time": "2024-03-08 15:14:41",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:41\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:41\" error=2 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG OBJECT GET type=host name=1.1.1.1\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "2",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG OBJECT GET type=host name=1.1.1.1",
+                "sessionid": "1",
+                "startime": "2024-03-08 15:14:41",
+                "time": "2024-03-08 15:14:41",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:48\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:48\" pri=5 service=routerd msg=\"The gateway of the router is now used for routing router:Firewall_out_router gateway:Firewall_out_router ipv:4 (192.168.197.2)\" logtype=\"system\""
+            },
+            "stormshield": {
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "The gateway of the router is now used for routing router:Firewall_out_router gateway:Firewall_out_router ipv:4 (192.168.197.2)",
+                "pri": "5",
+                "service": "routerd",
+                "startime": "2024-03-08 15:14:48",
+                "time": "2024-03-08 15:14:48",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:48\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:48\" pri=5 service=routerd msg=\"routerd daemon configuration reloaded, modules: pbr_route, ip_version: all (reason: Refresh)\" logtype=\"system\""
+            },
+            "stormshield": {
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "routerd daemon configuration reloaded, modules: pbr_route, ip_version: all (reason: Refresh)",
+                "pri": "5",
+                "service": "routerd",
+                "startime": "2024-03-08 15:14:48",
+                "time": "2024-03-08 15:14:48",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:48\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:48\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"CONFIG DNS ACTIVATE\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "CONFIG DNS ACTIVATE",
+                "sessionid": "1",
+                "startime": "2024-03-08 15:14:48",
+                "time": "2024-03-08 15:14:48",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:49\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:48\" pri=5 src=192.168.197.2 dst=0.0.0.0 msg=\"Remote host reachable:  through Firewall_out_router(192.168.197.2) on router Firewall_out_router\" service=sysevent alarmid=82 logtype=\"system\""
+            },
+            "stormshield": {
+                "alarmid": "82",
+                "dst": "0.0.0.0",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "Remote host reachable:  through Firewall_out_router(192.168.197.2) on router Firewall_out_router",
+                "pri": "5",
+                "service": "sysevent",
+                "src": "192.168.197.2",
+                "startime": "2024-03-08 15:14:48",
+                "time": "2024-03-08 15:14:49",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:51\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:51\" SavedEvaluation=153 DynamicMem=0 HostMem=0 FragMem=0 ICMPMem=0 ConnMem=0 AssocMem=0 EtherStateMem=0 IPStateMem=0 DTrackMem=0 Logged=10 LogOverflow=0 HostrepMax=0 HostrepScore=0 HostrepRequests=0 PvmFacts=0 PvmOverflow=0 Accepted=289 Blocked=0 Byte(i/o)=97364/145065 Fragmented=0 TCPPacket=178 TCPByte(i/o)=86297/116839 TCPConn=3 TCPConnNatSrc=0 TCPConnNatDst=0 TCPConnNoNatSrc=0 TCPConnNoNatDst=0 UDPPacket=111 UDPByte(i/o)=11067/28226 UDPConn=0 UDPConnNatSrc=0 UDPConnNatDst=0 UDPConnNoNatSrc=0 UDPConnNoNatDst=0 ICMPPacket=0 ICMPByte(i/o)=0/0 IPStatePacket=0 IPStateByte(i/o)=0/0 IPStateConn=0 IPStateConnNatSrc=0 IPStateConnNatDst=0 IPStateConnNoNatSrc=0 IPStateConnNoNatDst=0 SCTPAssocPacket=0 SCTPAssocByte(i/o)=0/0 SCTPAssoc=0 EtherStatePacket=0 EtherStateByte(i/o)=0/0 EtherStateConn=0 TLSCertCacheEntriesNb=0 TLSCertCacheLookup(miss/total)=0/0 TLSCertCacheInsert=0 TLSCertCacheFlushOp=0 TLSCertCachePurgeOp=0 TLSCertCacheFlushedNb=0 TLSCertCachePurgedNb=0 TLSCertCacheExpiredNb=0 logtype=\"filterstat\""
+            },
+            "stormshield": {
+                "Accepted": "289",
+                "AssocMem": "0",
+                "Blocked": "0",
+                "Byte(i/o)": "97364/145065",
+                "ConnMem": "0",
+                "DTrackMem": "0",
+                "DynamicMem": "0",
+                "EtherStateByte(i/o)": "0/0",
+                "EtherStateConn": "0",
+                "EtherStateMem": "0",
+                "EtherStatePacket": "0",
+                "FragMem": "0",
+                "Fragmented": "0",
+                "HostMem": "0",
+                "HostrepMax": "0",
+                "HostrepRequests": "0",
+                "HostrepScore": "0",
+                "ICMPByte(i/o)": "0/0",
+                "ICMPMem": "0",
+                "ICMPPacket": "0",
+                "IPStateByte(i/o)": "0/0",
+                "IPStateConn": "0",
+                "IPStateConnNatDst": "0",
+                "IPStateConnNatSrc": "0",
+                "IPStateConnNoNatDst": "0",
+                "IPStateConnNoNatSrc": "0",
+                "IPStateMem": "0",
+                "IPStatePacket": "0",
+                "LogOverflow": "0",
+                "Logged": "10",
+                "PvmFacts": "0",
+                "PvmOverflow": "0",
+                "SCTPAssoc": "0",
+                "SCTPAssocByte(i/o)": "0/0",
+                "SCTPAssocPacket": "0",
+                "SavedEvaluation": "153",
+                "TCPByte(i/o)": "86297/116839",
+                "TCPConn": "3",
+                "TCPConnNatDst": "0",
+                "TCPConnNatSrc": "0",
+                "TCPConnNoNatDst": "0",
+                "TCPConnNoNatSrc": "0",
+                "TCPPacket": "178",
+                "TLSCertCacheEntriesNb": "0",
+                "TLSCertCacheExpiredNb": "0",
+                "TLSCertCacheFlushOp": "0",
+                "TLSCertCacheFlushedNb": "0",
+                "TLSCertCacheInsert": "0",
+                "TLSCertCacheLookup(miss/total)": "0/0",
+                "TLSCertCachePurgeOp": "0",
+                "TLSCertCachePurgedNb": "0",
+                "UDPByte(i/o)": "11067/28226",
+                "UDPConn": "0",
+                "UDPConnNatDst": "0",
+                "UDPConnNatSrc": "0",
+                "UDPConnNoNatDst": "0",
+                "UDPConnNoNatSrc": "0",
+                "UDPPacket": "111",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "startime": "2024-03-08 15:14:51",
+                "time": "2024-03-08 15:14:51",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:54\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:54\" pri=5 service=userreqd msg=\"reloading daemon configuration (reason: SIGHUP)\" logtype=\"system\""
+            },
+            "stormshield": {
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "reloading daemon configuration (reason: SIGHUP)",
+                "pri": "5",
+                "service": "userreqd",
+                "startime": "2024-03-08 15:14:54",
+                "time": "2024-03-08 15:14:54",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:55\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:54\" pri=5 msg=\"Active Update: update successful IPData\" service=sysevent alarmid=41 logtype=\"system\""
+            },
+            "stormshield": {
+                "alarmid": "41",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "Active Update: update successful IPData",
+                "pri": "5",
+                "service": "sysevent",
+                "startime": "2024-03-08 10:14:54",
+                "time": "2024-03-08 15:14:55",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:56\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:56\" error=1 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"QUIT\" logtype=\"server\""
+            },
+            "stormshield": {
+                "address": "192.168.197.1",
+                "error": "1",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "QUIT",
+                "sessionid": "1",
+                "startime": "2024-03-08 15:14:56",
+                "time": "2024-03-08 15:14:56",
+                "tz": "+0000",
+                "user": "admin"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:57\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:56\" pri=4 msg=\"Connection terminated for  webadmin (timeout)\" class=system alarmid=3 logtype=\"alarm\""
+            },
+            "stormshield": {
+                "alarmid": "3",
+                "class": "system",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "Connection terminated for  webadmin (timeout)",
+                "pri": "4",
+                "startime": "2024-03-08 10:14:56",
+                "time": "2024-03-08 15:14:57",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:57\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:51\" pri=5 confid=01 slotlevel=0 ruleid=7 ipproto=tcp dstif=\"Ethernet0\" dstifname=\"out\" proto=https src=192.168.197.134 srcport=19883 srcname=Firewall_out dst=149.202.36.20 dstport=443 dstportname=https dstname=update2-sns.stormshieldcs.eu dstcontinent=\"eu\" dstcountry=\"fr\" modsrc=192.168.197.134 modsrcport=19883 origdst=149.202.36.20 origdstport=443 ipv=4 sent=3721 rcvd=921861 duration=5.52 action=pass logtype=\"connection\""
+            },
+            "stormshield": {
+                "action": "pass",
+                "confid": "01",
+                "dst": "149.202.36.20",
+                "dstcontinent": "eu",
+                "dstcountry": "fr",
+                "dstif": "Ethernet0",
+                "dstifname": "out",
+                "dstname": "update2-sns.stormshieldcs.eu",
+                "dstport": "443",
+                "dstportname": "https",
+                "duration": "5.52",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "ipproto": "tcp",
+                "ipv": "4",
+                "modsrc": "192.168.197.134",
+                "modsrcport": "19883",
+                "origdst": "149.202.36.20",
+                "origdstport": "443",
+                "pri": "5",
+                "proto": "https",
+                "rcvd": "921861",
+                "ruleid": "7",
+                "sent": "3721",
+                "slotlevel": "0",
+                "src": "192.168.197.134",
+                "srcname": "Firewall_out",
+                "srcport": "19883",
+                "startime": "2024-03-08 10:14:51",
+                "time": "2024-03-08 15:14:57",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:57\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:54\" pri=5 confid=01 slotlevel=0 ruleid=7 ipproto=tcp dstif=\"Ethernet0\" dstifname=\"out\" proto=https src=192.168.197.134 srcport=15908 srcname=Firewall_out dst=149.202.36.4 dstport=443 dstportname=https dstname=update1-sns.stormshieldcs.eu dstcontinent=\"eu\" dstcountry=\"fr\" modsrc=192.168.197.134 modsrcport=15908 origdst=149.202.36.4 origdstport=443 ipv=4 sent=1467 rcvd=4863757 duration=2.98 action=pass logtype=\"connection\""
+            },
+            "stormshield": {
+                "action": "pass",
+                "confid": "01",
+                "dst": "149.202.36.4",
+                "dstcontinent": "eu",
+                "dstcountry": "fr",
+                "dstif": "Ethernet0",
+                "dstifname": "out",
+                "dstname": "update1-sns.stormshieldcs.eu",
+                "dstport": "443",
+                "dstportname": "https",
+                "duration": "2.98",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "ipproto": "tcp",
+                "ipv": "4",
+                "modsrc": "192.168.197.134",
+                "modsrcport": "15908",
+                "origdst": "149.202.36.4",
+                "origdstport": "443",
+                "pri": "5",
+                "proto": "https",
+                "rcvd": "4863757",
+                "ruleid": "7",
+                "sent": "1467",
+                "slotlevel": "0",
+                "src": "192.168.197.134",
+                "srcname": "Firewall_out",
+                "srcport": "15908",
+                "startime": "2024-03-08 10:14:54",
+                "time": "2024-03-08 15:14:57",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:57\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:51\" pri=5 confid=01 slotlevel=0 ruleid=7 ipproto=tcp dstif=\"Ethernet0\" dstifname=\"out\" proto=https src=192.168.197.134 srcport=14244 srcname=Firewall_out dst=149.202.36.4 dstport=443 dstportname=https dstname=update1-sns.stormshieldcs.eu dstcontinent=\"eu\" dstcountry=\"fr\" modsrc=192.168.197.134 modsrcport=14244 origdst=149.202.36.4 origdstport=443 ipv=4 sent=790 rcvd=6680 duration=5.92 action=pass logtype=\"connection\""
+            },
+            "stormshield": {
+                "action": "pass",
+                "confid": "01",
+                "dst": "149.202.36.4",
+                "dstcontinent": "eu",
+                "dstcountry": "fr",
+                "dstif": "Ethernet0",
+                "dstifname": "out",
+                "dstname": "update1-sns.stormshieldcs.eu",
+                "dstport": "443",
+                "dstportname": "https",
+                "duration": "5.92",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "ipproto": "tcp",
+                "ipv": "4",
+                "modsrc": "192.168.197.134",
+                "modsrcport": "14244",
+                "origdst": "149.202.36.4",
+                "origdstport": "443",
+                "pri": "5",
+                "proto": "https",
+                "rcvd": "6680",
+                "ruleid": "7",
+                "sent": "790",
+                "slotlevel": "0",
+                "src": "192.168.197.134",
+                "srcname": "Firewall_out",
+                "srcport": "14244",
+                "startime": "2024-03-08 10:14:51",
+                "time": "2024-03-08 15:14:57",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:58\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:56\" pri=5 msg=\"Active Update: update successful CompromisedUrls\" service=sysevent alarmid=41 logtype=\"system\""
+            },
+            "stormshield": {
+                "alarmid": "41",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "msg": "Active Update: update successful CompromisedUrls",
+                "pri": "5",
+                "service": "sysevent",
+                "startime": "2024-03-08 10:14:56",
+                "time": "2024-03-08 15:14:58",
+                "tz": "+0000"
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        }
+    ]
+}
