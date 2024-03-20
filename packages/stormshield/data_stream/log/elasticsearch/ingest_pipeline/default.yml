@@ -14,7 +14,7 @@ processors:
       description: Parse key/value pairs from message.
       lang: painless
       source: >-
-        ctx["_fields_"] = new HashMap();
+        ctx["stormshield"] = new HashMap();
 
         def kvStart = 0;
         def kvSplit = 0;
@@ -37,7 +37,7 @@ processors:
             if (kvStart != kvSplit) {
               def key = ctx["message"].substring(kvStart, kvSplit);
               def value = ctx["message"].substring(kvSplit + 1, i).replace("\"", "");
-              ctx["_fields_"][key] = value;
+              ctx["stormshield"][key] = value;
             }
 
             kvStart = i + 1;
@@ -48,9 +48,6 @@ processors:
   # Process fields
   # ...
 
-  - rename:
-      target_field: stormshield
-      field: _fields_
   - remove:
       field:
         - message
