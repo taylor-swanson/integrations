@@ -1,0 +1,68 @@
+{
+    "@timestamp": "2024-03-08T10:14:08.000Z",
+    "agent": {
+        "ephemeral_id": "24b2f2eb-c810-4a65-a65d-182d7090ff3c",
+        "id": "00d7d2d3-ffd7-41d2-b9e3-87dc3711bea3",
+        "name": "docker-fleet-agent",
+        "type": "filebeat",
+        "version": "8.12.2"
+    },
+    "data_stream": {
+        "dataset": "stormshield.log",
+        "namespace": "ep",
+        "type": "logs"
+    },
+    "ecs": {
+        "version": "8.11.0"
+    },
+    "elastic_agent": {
+        "id": "00d7d2d3-ffd7-41d2-b9e3-87dc3711bea3",
+        "snapshot": false,
+        "version": "8.12.2"
+    },
+    "event": {
+        "agent_id_status": "verified",
+        "dataset": "stormshield.log",
+        "ingested": "2024-04-15T19:28:06Z",
+        "original": "id=firewall time=\"2024-03-08 10:14:08\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 10:14:08\" error=0 user=\"admin\" address=192.168.197.1 sessionid=1 msg=\"PKI SEARCH scope=local type=ca\" logtype=\"server\"",
+        "timezone": "+00:00"
+    },
+    "input": {
+        "type": "udp"
+    },
+    "log": {
+        "source": {
+            "address": "172.29.0.4:41349"
+        },
+        "syslog": {
+            "appname": "serverd",
+            "facility": {
+                "code": 1,
+                "name": "user-level"
+            },
+            "hostname": "stormy-1",
+            "priority": 13,
+            "severity": {
+                "code": 5,
+                "name": "Notice"
+            },
+            "version": "1"
+        }
+    },
+    "stormshield": {
+        "address": "192.168.197.1",
+        "error": "0",
+        "fw": "stormy-1",
+        "id": "firewall",
+        "msg": "PKI SEARCH scope=local type=ca",
+        "sessionid": "1",
+        "startime": "2024-03-08 10:14:08",
+        "time": "2024-03-08 10:14:08",
+        "tz": "+0000",
+        "user": "admin"
+    },
+    "tags": [
+        "preserve_original_event",
+        "forwarded"
+    ]
+}
