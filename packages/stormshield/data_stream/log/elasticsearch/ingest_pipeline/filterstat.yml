@@ -1,0 +1,21 @@
+---
+description: Pipeline for processing filterstat logs from Stormshield appliances.
+processors:
+  - script:
+      tag: script_filterstat_split_composite
+      lang: painless
+      decription: Splits composite key/value pairs into nested data.
+      source: >-
+        for (ctx.stormshield.entrySet() -> (k, v 
+
+  - set:
+      field: noop
+      value: noop
+
+on_failure:
+  - append:
+      field: error.message
+      value: 'Processor {{{_ingest.on_failure_processor_type}}} with tag {{{_ingest.on_failure_processor_tag}}} in pipeline {{{_ingest.pipeline}}} failed with message: {{{_ingest.on_failure_message}}}'
+  - set:
+      field: event.kind
+      value: pipeline_error
