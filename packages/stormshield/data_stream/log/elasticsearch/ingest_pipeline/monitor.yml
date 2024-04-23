@@ -1,0 +1,45 @@
+---
+description: Pipeline for processing monitor logs from Stormshield appliances.
+processors:
+  - script:
+      tag: script_process_devices
+      lang: painless
+      description: Process device stat fields.
+      params:
+        devices:
+          - agg
+          - ipsec
+          - sslvpn
+          - Wifi
+          - Qid
+          - Vlan
+          - Ethernet
+      source: >-
+        def foo = 0;
+        
+        def deviceStats = [:];
+        ctx.stormshield.forEach((k, v) -> {
+          params.devices.forEach(d -> {
+            if (k.startsWith(d)) {
+              deviceStats[k] = v;
+            }
+        
+            return true;
+          });
+        });
+        
+        if (!deviceStats.isEmpty()) {
+          ctx.stormshield.device_stats = [:];
+          deviceStats.forEach((k, v) -> {
+            ctx.stormshield.device_stats[k] = v;
+            ctx.stormshield.remove(k);
+          });
+        }
+
+on_failure:
+  - append:
+      field: error.message
+      value: 'Processor {{{_ingest.on_failure_processor_type}}} with tag {{{_ingest.on_failure_processor_tag}}} in pipeline {{{_ingest.pipeline}}} failed with message: {{{_ingest.on_failure_message}}}'
+  - set:
+      field: event.kind
+      value: pipeline_error

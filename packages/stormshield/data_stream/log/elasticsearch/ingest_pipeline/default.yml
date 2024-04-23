@@ -47,6 +47,9 @@ processors:
   - pipeline:
       name: '{{ IngestPipeline "filterstat" }}'
       if: ctx.stormshield.logtype == 'filterstat'
+  - pipeline:
+      name: '{{ IngestPipeline "monitor" }}'
+      if: ctx.stormshield.logtype == 'monitor'
 
   - remove:
       field:
