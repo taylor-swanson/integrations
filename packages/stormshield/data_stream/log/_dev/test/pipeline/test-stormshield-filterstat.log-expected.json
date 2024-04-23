@@ -1,0 +1,145 @@
+{
+    "expected": [
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 15:14:51\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 15:14:51\" SavedEvaluation=153 DynamicMem=0 HostMem=0 FragMem=0 ICMPMem=0 ConnMem=0 AssocMem=0 EtherStateMem=0 IPStateMem=0 DTrackMem=0 Logged=10 LogOverflow=0 HostrepMax=0 HostrepScore=0 HostrepRequests=0 PvmFacts=0 PvmOverflow=0 Accepted=289 Blocked=0 Byte(i/o)=97364/145065 Fragmented=0 TCPPacket=178 TCPByte(i/o)=86297/116839 TCPConn=3 TCPConnNatSrc=0 TCPConnNatDst=0 TCPConnNoNatSrc=0 TCPConnNoNatDst=0 UDPPacket=111 UDPByte(i/o)=11067/28226 UDPConn=0 UDPConnNatSrc=0 UDPConnNatDst=0 UDPConnNoNatSrc=0 UDPConnNoNatDst=0 ICMPPacket=0 ICMPByte(i/o)=0/0 IPStatePacket=0 IPStateByte(i/o)=0/0 IPStateConn=0 IPStateConnNatSrc=0 IPStateConnNatDst=0 IPStateConnNoNatSrc=0 IPStateConnNoNatDst=0 SCTPAssocPacket=0 SCTPAssocByte(i/o)=0/0 SCTPAssoc=0 EtherStatePacket=0 EtherStateByte(i/o)=0/0 EtherStateConn=0 TLSCertCacheEntriesNb=0 TLSCertCacheLookup(miss/total)=0/0 TLSCertCacheInsert=0 TLSCertCacheFlushOp=0 TLSCertCachePurgeOp=0 TLSCertCacheFlushedNb=0 TLSCertCachePurgedNb=0 TLSCertCacheExpiredNb=0 logtype=\"filterstat\""
+            },
+            "stormshield": {
+                "Accepted": "289",
+                "AssocMem": "0",
+                "Blocked": "0",
+                "Byte": {
+                    "in_count": "97364",
+                    "out_count": "145065"
+                },
+                "ConnMem": "0",
+                "DTrackMem": "0",
+                "DynamicMem": "0",
+                "EtherStateByte": {
+                    "in_count": "0",
+                    "out_count": "0"
+                },
+                "EtherStateConn": "0",
+                "EtherStateMem": "0",
+                "EtherStatePacket": "0",
+                "FragMem": "0",
+                "Fragmented": "0",
+                "HostMem": "0",
+                "HostrepMax": "0",
+                "HostrepRequests": "0",
+                "HostrepScore": "0",
+                "ICMPByte": {
+                    "in_count": "0",
+                    "out_count": "0"
+                },
+                "ICMPMem": "0",
+                "ICMPPacket": "0",
+                "IPStateByte": {
+                    "in_count": "0",
+                    "out_count": "0"
+                },
+                "IPStateConn": "0",
+                "IPStateConnNatDst": "0",
+                "IPStateConnNatSrc": "0",
+                "IPStateConnNoNatDst": "0",
+                "IPStateConnNoNatSrc": "0",
+                "IPStateMem": "0",
+                "IPStatePacket": "0",
+                "LogOverflow": "0",
+                "Logged": "10",
+                "PvmFacts": "0",
+                "PvmOverflow": "0",
+                "SCTPAssoc": "0",
+                "SCTPAssocByte": {
+                    "in_count": "0",
+                    "out_count": "0"
+                },
+                "SCTPAssocPacket": "0",
+                "SavedEvaluation": "153",
+                "TCPByte": {
+                    "in_count": "86297",
+                    "out_count": "116839"
+                },
+                "TCPConn": "3",
+                "TCPConnNatDst": "0",
+                "TCPConnNatSrc": "0",
+                "TCPConnNoNatDst": "0",
+                "TCPConnNoNatSrc": "0",
+                "TCPPacket": "178",
+                "TLSCertCacheEntriesNb": "0",
+                "TLSCertCacheExpiredNb": "0",
+                "TLSCertCacheFlushOp": "0",
+                "TLSCertCacheFlushedNb": "0",
+                "TLSCertCacheInsert": "0",
+                "TLSCertCacheLookup": {
+                    "miss": "0",
+                    "total": "0"
+                },
+                "TLSCertCachePurgeOp": "0",
+                "TLSCertCachePurgedNb": "0",
+                "UDPByte": {
+                    "in_count": "11067",
+                    "out_count": "28226"
+                },
+                "UDPConn": "0",
+                "UDPConnNatDst": "0",
+                "UDPConnNatSrc": "0",
+                "UDPConnNoNatDst": "0",
+                "UDPConnNoNatSrc": "0",
+                "UDPPacket": "111",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "logtype": "filterstat",
+                "startime": "2024-03-08 15:14:51",
+                "time": "2024-03-08 15:14:51",
+                "tz": "+0000"
+            }
+        },
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "original": "id=firewall time=\"2024-03-08 17:29:30\" fw=\"stormy-1\" tz=+0000 startime=\"2024-03-08 12:27:28\" pri=5 confid=01 slotlevel=0 ruleid=7 ipproto=udp dstif=\"Ethernet0\" dstifname=\"out\" proto=ntp src=192.168.197.134 srcport=123 srcportname=ntp srcname=Firewall_out dst=151.80.252.82 dstport=123 dstportname=ntp dstname=ntp2.stormshieldcs.eu dstcontinent=\"eu\" dstcountry=\"fr\" modsrc=192.168.197.134 modsrcport=123 origdst=151.80.252.82 origdstport=123 ipv=4 sent=48 rcvd=48 duration=0.09 action=pass logtype=\"connection\""
+            },
+            "stormshield": {
+                "action": "pass",
+                "confid": "01",
+                "dst": "151.80.252.82",
+                "dstcontinent": "eu",
+                "dstcountry": "fr",
+                "dstif": "Ethernet0",
+                "dstifname": "out",
+                "dstname": "ntp2.stormshieldcs.eu",
+                "dstport": "123",
+                "dstportname": "ntp",
+                "duration": "0.09",
+                "fw": "stormy-1",
+                "id": "firewall",
+                "ipproto": "udp",
+                "ipv": "4",
+                "logtype": "connection",
+                "modsrc": "192.168.197.134",
+                "modsrcport": "123",
+                "origdst": "151.80.252.82",
+                "origdstport": "123",
+                "pri": "5",
+                "proto": "ntp",
+                "rcvd": "48",
+                "ruleid": "7",
+                "sent": "48",
+                "slotlevel": "0",
+                "src": "192.168.197.134",
+                "srcname": "Firewall_out",
+                "srcport": "123",
+                "srcportname": "ntp",
+                "startime": "2024-03-08 12:27:28",
+                "time": "2024-03-08 17:29:30",
+                "tz": "+0000"
+            }
+        }
+    ]
+}

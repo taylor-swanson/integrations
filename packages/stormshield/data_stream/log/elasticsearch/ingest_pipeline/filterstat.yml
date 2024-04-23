@@ -6,8 +6,8 @@ processors:
       lang: painless
       description: Splits composite key/value pairs into nested data.
       params:
-        i: in
-        o: out
+        i: in_count
+        o: out_count
       source: >-
         Pattern compositeKeyPattern = /^(\w+)\((\w+)\/(\w+)\)$/;
         Pattern compositeValuePattern = /^(\w+)\/(\w+)$/;
