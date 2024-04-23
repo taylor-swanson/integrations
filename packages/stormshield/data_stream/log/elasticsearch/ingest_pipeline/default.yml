@@ -32,7 +32,7 @@ processors:
           if (c == (char)'=') {
             kvSplit = i;
           }
-          if (c == (char)' ') {
+          if (c == (char)' ' || i == n - 1) {
             if (kvStart != kvSplit) {
               def key = ctx["message"].substring(kvStart, kvSplit);
               def value = ctx["message"].substring(kvSplit + 1, i).replace("\"", "");
@@ -44,8 +44,9 @@ processors:
           }
         }
 
-  # Process fields
-  # TODO ...
+  - pipeline:
+      name: '{{ IngestPipeline "filterstat" }}'
+      if: ctx.stormshield.logtype == 'filterstat'
 
   - remove:
       field:

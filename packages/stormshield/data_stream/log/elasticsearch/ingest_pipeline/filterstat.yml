@@ -2,15 +2,48 @@
 description: Pipeline for processing filterstat logs from Stormshield appliances.
 processors:
   - script:
-      tag: script_filterstat_split_composite
+      tag: script_split_composite_pairs
       lang: painless
-      decription: Splits composite key/value pairs into nested data.
+      description: Splits composite key/value pairs into nested data.
+      params:
+        i: in
+        o: out
       source: >-
-        for (ctx.stormshield.entrySet() -> (k, v 
+        Pattern compositeKeyPattern = /^(\w+)\((\w+)\/(\w+)\)$/;
+        Pattern compositeValuePattern = /^(\w+)\/(\w+)$/;
+        
+        def replacePairs = [:];
+        ctx.stormshield.forEach((k, v) -> {
+          if (k.contains('(')) {
+            replacePairs[k] = v;
+          }
+        
+          return true;
+        });
+        
+        replacePairs.forEach((k, v) -> {
+          def keyMatcher = compositeKeyPattern.matcher(k);
+          if (!keyMatcher.matches()) {
+            return false;
+          }
+          def valueMatcher = compositeValuePattern.matcher(v);
+          if (!valueMatcher.matches()) {
+            return false;
+          }
 
-  - set:
-      field: noop
-      value: noop
+          def newSubkeys = [:];
+          def newSubkey0 = keyMatcher.group(2);
+          def newSubkey1 = keyMatcher.group(3);
+
+          newSubkey0 = params.containsKey(newSubkey0) ? params[newSubkey0] : newSubkey0;
+          newSubkey1 = params.containsKey(newSubkey1) ? params[newSubkey1] : newSubkey1;
+
+          newSubkeys[newSubkey0] = valueMatcher.group(1);
+          newSubkeys[newSubkey1] = valueMatcher.group(2);
+
+          ctx.stormshield[keyMatcher.group(1)] = newSubkeys;
+          ctx.stormshield.remove(k);
+        });
 
 on_failure:
   - append:
