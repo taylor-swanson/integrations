@@ -14,9 +14,15 @@ processors:
           - Qid
           - Vlan
           - Ethernet
+        stats:
+          - name
+          - incoming_throughput
+          - maximum_incoming_throughput
+          - outgoing_throughput
+          - maximum_outgoing_throughput
+          - packets_accepted
+          - packets_blocked
       source: >-
-        def foo = 0;
-        
         def deviceStats = [:];
         ctx.stormshield.forEach((k, v) -> {
           params.devices.forEach(d -> {
@@ -28,12 +34,25 @@ processors:
           });
         });
         
-        if (!deviceStats.isEmpty()) {
-          ctx.stormshield.device_stats = [:];
-          deviceStats.forEach((k, v) -> {
-            ctx.stormshield.device_stats[k] = v;
-            ctx.stormshield.remove(k);
-          });
+        if (deviceStats.isEmpty()) {
+          return;
+        }
+
+        ctx.stormshield.device_stats = [:];
+
+        for (entry in deviceStats.entrySet()) {
+          ctx.stormshield.device_stats[entry.getKey()] = [:];
+
+          def values = entry.getValue().splitOnToken(',', 7);
+          for (int i = 0; i < values.length; ++i) {
+            if (i == 0) {
+              ctx.stormshield.device_stats[entry.getKey()][params.stats[i]] = values[i];
+            } else {
+              ctx.stormshield.device_stats[entry.getKey()][params.stats[i]] = Long.parseLong(values[i]);        
+            }
+          }
+
+          ctx.stormshield.remove(entry.getKey());
         }
 
 on_failure:
