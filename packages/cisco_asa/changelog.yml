@@ -3,7 +3,7 @@
   changes:
     - description: ECS version updated to 8.16.0.
       type: enhancement
-      link: https://github.com/elastic/integrations/pull/999999
+      link: https://github.com/elastic/integrations/pull/12119
 - version: "2.38.3"
   changes:
     - description: "Handles another variation of log message type 113040 that includes a Group and Terminating message."
