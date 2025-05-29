@@ -1,0 +1,46 @@
+config_version: 2
+interval: {{interval}}
+{{#if enable_request_tracer}}
+resource.tracer.filename: "../../logs/cel/http-request-trace-*.ndjson"
+request.tracer.maxbackups: 5
+{{/if}}
+{{#if proxy_url}}
+resource.proxy_url: {{proxy_url}}
+{{/if}}
+{{#if ssl}}
+resource.ssl: {{ssl}}
+{{/if}}
+{{#if http_client_timeout}}
+resource.timeout: {{http_client_timeout}}
+{{/if}}
+resource.url: {{url}}
+resource.headers:
+  Accept:
+    - application/json
+  Authorization:
+    - {{api_token}}
+program: |
+    get(state.url+"/v1/scan/auditLogs").as(resp, resp.Body.decode_json().as(body, {
+      "events": (
+        body.map(e,
+          has(e.secrets) ?
+            (e.secrets.map(s,
+              {
+                "data": {
+                  "date": e.date,
+                  "request_id": e.request_id,
+                  "secret_type": s.secret_type,
+                  "exposed_value": s.exposed_value,
+                  "line_number": s.line_number
+                }
+              }))
+            :
+              [{
+                "data": {
+                  "date": e.date,
+                  "request_id": e.request_id
+                }
+              }]
+          )
+        ).flatten()
+    }))
