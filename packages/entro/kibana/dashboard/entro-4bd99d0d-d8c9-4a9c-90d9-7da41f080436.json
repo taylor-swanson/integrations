@@ -10,20 +10,19 @@
                 "ignoreValidations": false
             },
             "panelsJSON": {
-                "3224a786-582e-4643-bf89-a8a77b61c7e4": {
+                "0f21fa31-e10a-4218-949a-d835c2343ba5": {
                     "explicitInput": {
-                        "dataViewId": "eaa3ed0a-4b5f-467a-aa28-0997dc96e0ac",
+                        "dataViewId": "6caf641e-f8fc-4604-853b-51e9da350271",
                         "fieldName": "vulnerability.description",
-                        "id": "3224a786-582e-4643-bf89-a8a77b61c7e4",
+                        "id": "0f21fa31-e10a-4218-949a-d835c2343ba5",
                         "searchTechnique": "prefix",
                         "selectedOptions": [],
                         "sort": {
                             "by": "_count",
                             "direction": "desc"
-                        },
-                        "title": "Vulnerability Types"
+                        }
                     },
-                    "grow": true,
+                    "grow": false,
                     "order": 0,
                     "type": "optionsListControl",
                     "width": "medium"
@@ -34,7 +33,27 @@
         "description": "",
         "kibanaSavedObjectMeta": {
             "searchSourceJSON": {
-                "filter": [],
+                "filter": [
+                    {
+                        "$state": {
+                            "store": "appState"
+                        },
+                        "meta": {
+                            "alias": null,
+                            "disabled": false,
+                            "field": "vulnerability.description",
+                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                            "key": "vulnerability.description",
+                            "negate": false,
+                            "type": "exists"
+                        },
+                        "query": {
+                            "exists": {
+                                "field": "vulnerability.description"
+                            }
+                        }
+                    }
+                ],
                 "query": {
                     "language": "kuery",
                     "query": ""
@@ -54,8 +73,8 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "eaa3ed0a-4b5f-467a-aa28-0997dc96e0ac",
-                                "name": "indexpattern-datasource-layer-1035f0d2-0c02-4906-b036-55c4d0842ca2",
+                                "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+                                "name": "indexpattern-datasource-layer-70e983e3-f0b0-46a1-93a8-8e0e9f1b1b6a",
                                 "type": "index-pattern"
                             }
                         ],
@@ -64,142 +83,12 @@
                             "datasourceStates": {
                                 "formBased": {
                                     "layers": {
-                                        "1035f0d2-0c02-4906-b036-55c4d0842ca2": {
+                                        "70e983e3-f0b0-46a1-93a8-8e0e9f1b1b6a": {
                                             "columnOrder": [
-                                                "9291bf75-f21a-47ab-8843-6f254fe1b796"
+                                                "ce1e6364-a805-4003-a572-34817d93aa36"
                                             ],
                                             "columns": {
-                                                "9291bf75-f21a-47ab-8843-6f254fe1b796": {
-                                                    "customLabel": true,
-                                                    "dataType": "number",
-                                                    "isBucketed": false,
-                                                    "label": "Total Number of Logs (Secrets Detected) ",
-                                                    "operationType": "count",
-                                                    "params": {
-                                                        "emptyAsNull": true
-                                                    },
-                                                    "scale": "ratio",
-                                                    "sourceField": "vulnerability.description"
-                                                }
-                                            },
-                                            "incompleteColumns": {},
-                                            "sampling": 1
-                                        }
-                                    }
-                                },
-                                "indexpattern": {
-                                    "layers": {}
-                                },
-                                "textBased": {
-                                    "layers": {}
-                                }
-                            },
-                            "filters": [],
-                            "internalReferences": [],
-                            "query": {
-                                "language": "kuery",
-                                "query": ""
-                            },
-                            "visualization": {
-                                "layerId": "1035f0d2-0c02-4906-b036-55c4d0842ca2",
-                                "layerType": "data",
-                                "metricAccessor": "9291bf75-f21a-47ab-8843-6f254fe1b796",
-                                "palette": {
-                                    "name": "status",
-                                    "params": {
-                                        "colorStops": [],
-                                        "continuity": "all",
-                                        "maxSteps": 5,
-                                        "name": "status",
-                                        "progression": "fixed",
-                                        "rangeMax": null,
-                                        "rangeMin": null,
-                                        "rangeType": "number",
-                                        "reverse": false,
-                                        "steps": 3,
-                                        "stops": [
-                                            {
-                                                "color": "#209280",
-                                                "stop": 85.33
-                                            },
-                                            {
-                                                "color": "#d6bf57",
-                                                "stop": 170.66
-                                            },
-                                            {
-                                                "color": "#cc5642",
-                                                "stop": 256
-                                            }
-                                        ]
-                                    },
-                                    "type": "palette"
-                                }
-                            }
-                        },
-                        "title": "",
-                        "type": "lens",
-                        "visualizationType": "lnsMetric"
-                    },
-                    "enhancements": {}
-                },
-                "gridData": {
-                    "h": 15,
-                    "i": "824a2005-f4b1-4f48-ad5b-265f0f374bda",
-                    "w": 7,
-                    "x": 0,
-                    "y": 0
-                },
-                "panelIndex": "824a2005-f4b1-4f48-ad5b-265f0f374bda",
-                "type": "lens"
-            },
-            {
-                "embeddableConfig": {
-                    "attributes": {
-                        "references": [
-                            {
-                                "id": "eaa3ed0a-4b5f-467a-aa28-0997dc96e0ac",
-                                "name": "indexpattern-datasource-layer-c4e69ce1-eed5-4919-9491-deff20a9560b",
-                                "type": "index-pattern"
-                            }
-                        ],
-                        "state": {
-                            "adHocDataViews": {},
-                            "datasourceStates": {
-                                "formBased": {
-                                    "currentIndexPatternId": "eaa3ed0a-4b5f-467a-aa28-0997dc96e0ac",
-                                    "layers": {
-                                        "c4e69ce1-eed5-4919-9491-deff20a9560b": {
-                                            "columnOrder": [
-                                                "5a277fbe-2b39-42a5-aeb3-a8739d5c956b",
-                                                "d152550d-4edf-4918-934e-591a10fe7ee8"
-                                            ],
-                                            "columns": {
-                                                "5a277fbe-2b39-42a5-aeb3-a8739d5c956b": {
-                                                    "dataType": "string",
-                                                    "isBucketed": true,
-                                                    "label": "Top 5 values of vulnerability.description",
-                                                    "operationType": "terms",
-                                                    "params": {
-                                                        "exclude": [],
-                                                        "excludeIsRegex": false,
-                                                        "include": [],
-                                                        "includeIsRegex": false,
-                                                        "missingBucket": false,
-                                                        "orderBy": {
-                                                            "columnId": "d152550d-4edf-4918-934e-591a10fe7ee8",
-                                                            "type": "column"
-                                                        },
-                                                        "orderDirection": "desc",
-                                                        "otherBucket": true,
-                                                        "parentFormat": {
-                                                            "id": "terms"
-                                                        },
-                                                        "size": 5
-                                                    },
-                                                    "scale": "ordinal",
-                                                    "sourceField": "vulnerability.description"
-                                                },
-                                                "d152550d-4edf-4918-934e-591a10fe7ee8": {
+                                                "ce1e6364-a805-4003-a572-34817d93aa36": {
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Count of records",
@@ -212,7 +101,6 @@
                                                 }
                                             },
                                             "incompleteColumns": {},
-                                            "indexPatternId": "eaa3ed0a-4b5f-467a-aa28-0997dc96e0ac",
                                             "sampling": 1
                                         }
                                     }
@@ -231,10 +119,112 @@
                                 "query": ""
                             },
                             "visualization": {
-                                "breakdownByAccessor": "5a277fbe-2b39-42a5-aeb3-a8739d5c956b",
-                                "layerId": "c4e69ce1-eed5-4919-9491-deff20a9560b",
+                                "color": "#E7664C",
+                                "layerId": "70e983e3-f0b0-46a1-93a8-8e0e9f1b1b6a",
                                 "layerType": "data",
-                                "metricAccessor": "d152550d-4edf-4918-934e-591a10fe7ee8",
+                                "metricAccessor": "ce1e6364-a805-4003-a572-34817d93aa36"
+                            }
+                        },
+                        "title": "",
+                        "type": "lens",
+                        "visualizationType": "lnsMetric"
+                    },
+                    "enhancements": {}
+                },
+                "gridData": {
+                    "h": 15,
+                    "i": "d90867a4-0ed9-4f91-906c-b9bea399aaa0",
+                    "w": 8,
+                    "x": 0,
+                    "y": 0
+                },
+                "panelIndex": "d90867a4-0ed9-4f91-906c-b9bea399aaa0",
+                "type": "lens"
+            },
+            {
+                "embeddableConfig": {
+                    "attributes": {
+                        "references": [
+                            {
+                                "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+                                "name": "indexpattern-datasource-layer-b5830e0f-0896-44ad-8782-053e40fa658b",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "state": {
+                            "adHocDataViews": {},
+                            "datasourceStates": {
+                                "formBased": {
+                                    "currentIndexPatternId": "6caf641e-f8fc-4604-853b-51e9da350271",
+                                    "layers": {
+                                        "b5830e0f-0896-44ad-8782-053e40fa658b": {
+                                            "columnOrder": [
+                                                "3d2c6bde-930f-4065-af46-eb7bec5adfef",
+                                                "ed5df86a-ae7f-4b1d-b0ee-a0e7dbf773e9"
+                                            ],
+                                            "columns": {
+                                                "3d2c6bde-930f-4065-af46-eb7bec5adfef": {
+                                                    "dataType": "string",
+                                                    "isBucketed": true,
+                                                    "label": "Top 5 values of vulnerability.description",
+                                                    "operationType": "terms",
+                                                    "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
+                                                        "missingBucket": false,
+                                                        "orderBy": {
+                                                            "columnId": "ed5df86a-ae7f-4b1d-b0ee-a0e7dbf773e9",
+                                                            "type": "column"
+                                                        },
+                                                        "orderDirection": "desc",
+                                                        "otherBucket": true,
+                                                        "parentFormat": {
+                                                            "id": "terms"
+                                                        },
+                                                        "size": 5
+                                                    },
+                                                    "scale": "ordinal",
+                                                    "sourceField": "vulnerability.description"
+                                                },
+                                                "ed5df86a-ae7f-4b1d-b0ee-a0e7dbf773e9": {
+                                                    "customLabel": false,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Count of records",
+                                                    "operationType": "count",
+                                                    "params": {
+                                                        "emptyAsNull": true
+                                                    },
+                                                    "scale": "ratio",
+                                                    "sourceField": "___records___"
+                                                }
+                                            },
+                                            "incompleteColumns": {},
+                                            "indexPatternId": "6caf641e-f8fc-4604-853b-51e9da350271",
+                                            "sampling": 1
+                                        }
+                                    }
+                                },
+                                "indexpattern": {
+                                    "layers": {}
+                                },
+                                "textBased": {
+                                    "layers": {}
+                                }
+                            },
+                            "filters": [],
+                            "internalReferences": [],
+                            "query": {
+                                "language": "kuery",
+                                "query": ""
+                            },
+                            "visualization": {
+                                "breakdownByAccessor": "3d2c6bde-930f-4065-af46-eb7bec5adfef",
+                                "layerId": "b5830e0f-0896-44ad-8782-053e40fa658b",
+                                "layerType": "data",
+                                "metricAccessor": "ed5df86a-ae7f-4b1d-b0ee-a0e7dbf773e9",
                                 "palette": {
                                     "name": "custom",
                                     "params": {
@@ -245,7 +235,7 @@
                                             },
                                             {
                                                 "color": "#d6bf57",
-                                                "stop": 15
+                                                "stop": 10
                                             },
                                             {
                                                 "color": "#cc5642",
@@ -264,7 +254,7 @@
                                         "stops": [
                                             {
                                                 "color": "#209280",
-                                                "stop": 15
+                                                "stop": 10
                                             },
                                             {
                                                 "color": "#d6bf57",
@@ -288,38 +278,150 @@
                 },
                 "gridData": {
                     "h": 15,
-                    "i": "ea547245-2fb7-41d5-9439-38c2dfebf07d",
+                    "i": "5919aaca-3991-4683-96c5-4a0cad38ae8e",
                     "w": 24,
-                    "x": 7,
+                    "x": 8,
                     "y": 0
                 },
-                "panelIndex": "ea547245-2fb7-41d5-9439-38c2dfebf07d",
+                "panelIndex": "5919aaca-3991-4683-96c5-4a0cad38ae8e",
                 "type": "lens"
+            },
+            {
+                "embeddableConfig": {
+                    "attributes": {
+                        "columns": [
+                            "vulnerability.description",
+                            "vulnerability.reference"
+                        ],
+                        "description": "",
+                        "grid": {},
+                        "hideChart": false,
+                        "isTextBasedQuery": false,
+                        "kibanaSavedObjectMeta": {
+                            "searchSourceJSON": {
+                                "fields": [
+                                    {
+                                        "field": "*",
+                                        "include_unmapped": true
+                                    }
+                                ],
+                                "filter": [
+                                    {
+                                        "$state": {
+                                            "store": "appState"
+                                        },
+                                        "meta": {
+                                            "alias": null,
+                                            "disabled": false,
+                                            "field": "vulnerability.description",
+                                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                                            "key": "vulnerability.description",
+                                            "negate": false,
+                                            "type": "exists",
+                                            "value": "exists"
+                                        },
+                                        "query": {
+                                            "exists": {
+                                                "field": "vulnerability.description"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "highlightAll": true,
+                                "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                                "query": {
+                                    "language": "kuery",
+                                    "query": ""
+                                },
+                                "sort": [
+                                    {
+                                        "@timestamp": {
+                                            "format": "strict_date_optional_time",
+                                            "order": "desc"
+                                        }
+                                    },
+                                    {
+                                        "_doc": "desc"
+                                    }
+                                ]
+                            }
+                        },
+                        "references": [
+                            {
+                                "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+                                "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                                "type": "index-pattern"
+                            },
+                            {
+                                "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+                                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "rowsPerPage": 500,
+                        "sort": [
+                            [
+                                "@timestamp",
+                                "desc"
+                            ]
+                        ],
+                        "timeRestore": false,
+                        "title": "",
+                        "viewMode": "documents"
+                    },
+                    "description": "",
+                    "enhancements": {}
+                },
+                "gridData": {
+                    "h": 15,
+                    "i": "e9155660-3599-4aea-a920-e440b573a5a4",
+                    "w": 24,
+                    "x": 0,
+                    "y": 15
+                },
+                "panelIndex": "e9155660-3599-4aea-a920-e440b573a5a4",
+                "title": "[Entro Security] Audit Search",
+                "type": "search"
             }
         ],
         "timeRestore": false,
-        "title": "[Entro Security] Secrets Metrics",
+        "title": "[Entro Security] Audit Dashboard",
         "version": 3
     },
     "coreMigrationVersion": "8.8.0",
-    "created_at": "2025-06-30T13:11:22.053Z",
+    "created_at": "2025-07-02T15:43:08.919Z",
     "created_by": "u_mGBROF_q5bmFCATbLXAcCwKa0k8JvONAwSruelyKA5E_0",
-    "id": "entro-886dc1eb-4469-4637-bf9f-b76e1a84e7e1",
+    "id": "entro-4bd99d0d-d8c9-4a9c-90d9-7da41f080436",
     "managed": false,
     "references": [
         {
-            "id": "eaa3ed0a-4b5f-467a-aa28-0997dc96e0ac",
-            "name": "824a2005-f4b1-4f48-ad5b-265f0f374bda:indexpattern-datasource-layer-1035f0d2-0c02-4906-b036-55c4d0842ca2",
+            "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+            "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
             "type": "index-pattern"
         },
         {
-            "id": "eaa3ed0a-4b5f-467a-aa28-0997dc96e0ac",
-            "name": "ea547245-2fb7-41d5-9439-38c2dfebf07d:indexpattern-datasource-layer-c4e69ce1-eed5-4919-9491-deff20a9560b",
+            "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+            "name": "d90867a4-0ed9-4f91-906c-b9bea399aaa0:indexpattern-datasource-layer-70e983e3-f0b0-46a1-93a8-8e0e9f1b1b6a",
             "type": "index-pattern"
         },
         {
-            "id": "eaa3ed0a-4b5f-467a-aa28-0997dc96e0ac",
-            "name": "controlGroup_c297649c-145f-4026-98a8-7f27d650f823:optionsListDataView",
+            "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+            "name": "5919aaca-3991-4683-96c5-4a0cad38ae8e:indexpattern-datasource-layer-b5830e0f-0896-44ad-8782-053e40fa658b",
+            "type": "index-pattern"
+        },
+        {
+            "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+            "name": "e9155660-3599-4aea-a920-e440b573a5a4:kibanaSavedObjectMeta.searchSourceJSON.index",
+            "type": "index-pattern"
+        },
+        {
+            "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+            "name": "e9155660-3599-4aea-a920-e440b573a5a4:kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+            "type": "index-pattern"
+        },
+        {
+            "id": "6caf641e-f8fc-4604-853b-51e9da350271",
+            "name": "controlGroup_0facf434-3fd6-4634-b5aa-724ce22d0d5c:optionsListDataView",
             "type": "index-pattern"
         }
     ],
