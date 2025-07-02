@@ -10,11 +10,11 @@
                 "ignoreValidations": false
             },
             "panelsJSON": {
-                "0f21fa31-e10a-4218-949a-d835c2343ba5": {
+                "995eed91-58b5-4d78-b5a1-6218bce4c285": {
                     "explicitInput": {
                         "dataViewId": "6caf641e-f8fc-4604-853b-51e9da350271",
                         "fieldName": "vulnerability.description",
-                        "id": "0f21fa31-e10a-4218-949a-d835c2343ba5",
+                        "id": "995eed91-58b5-4d78-b5a1-6218bce4c285",
                         "searchTechnique": "prefix",
                         "selectedOptions": [],
                         "sort": {
@@ -288,98 +288,22 @@
             },
             {
                 "embeddableConfig": {
-                    "attributes": {
-                        "columns": [
-                            "vulnerability.description",
-                            "vulnerability.reference"
-                        ],
-                        "description": "",
-                        "grid": {},
-                        "hideChart": false,
-                        "isTextBasedQuery": false,
-                        "kibanaSavedObjectMeta": {
-                            "searchSourceJSON": {
-                                "fields": [
-                                    {
-                                        "field": "*",
-                                        "include_unmapped": true
-                                    }
-                                ],
-                                "filter": [
-                                    {
-                                        "$state": {
-                                            "store": "appState"
-                                        },
-                                        "meta": {
-                                            "alias": null,
-                                            "disabled": false,
-                                            "field": "vulnerability.description",
-                                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
-                                            "key": "vulnerability.description",
-                                            "negate": false,
-                                            "type": "exists",
-                                            "value": "exists"
-                                        },
-                                        "query": {
-                                            "exists": {
-                                                "field": "vulnerability.description"
-                                            }
-                                        }
-                                    }
-                                ],
-                                "highlightAll": true,
-                                "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
-                                "query": {
-                                    "language": "kuery",
-                                    "query": ""
-                                },
-                                "sort": [
-                                    {
-                                        "@timestamp": {
-                                            "format": "strict_date_optional_time",
-                                            "order": "desc"
-                                        }
-                                    },
-                                    {
-                                        "_doc": "desc"
-                                    }
-                                ]
-                            }
-                        },
-                        "references": [
-                            {
-                                "id": "6caf641e-f8fc-4604-853b-51e9da350271",
-                                "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
-                                "type": "index-pattern"
-                            },
-                            {
-                                "id": "6caf641e-f8fc-4604-853b-51e9da350271",
-                                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
-                                "type": "index-pattern"
-                            }
-                        ],
-                        "rowsPerPage": 500,
-                        "sort": [
-                            [
-                                "@timestamp",
-                                "desc"
-                            ]
-                        ],
-                        "timeRestore": false,
-                        "title": "",
-                        "viewMode": "documents"
-                    },
                     "description": "",
-                    "enhancements": {}
+                    "enhancements": {
+                        "dynamicActions": {
+                            "events": []
+                        }
+                    }
                 },
                 "gridData": {
                     "h": 15,
                     "i": "e9155660-3599-4aea-a920-e440b573a5a4",
-                    "w": 24,
+                    "w": 32,
                     "x": 0,
                     "y": 15
                 },
                 "panelIndex": "e9155660-3599-4aea-a920-e440b573a5a4",
+                "panelRefName": "panel_e9155660-3599-4aea-a920-e440b573a5a4",
                 "title": "[Entro Security] Audit Search",
                 "type": "search"
             }
@@ -410,14 +334,9 @@
             "type": "index-pattern"
         },
         {
-            "id": "6caf641e-f8fc-4604-853b-51e9da350271",
-            "name": "e9155660-3599-4aea-a920-e440b573a5a4:kibanaSavedObjectMeta.searchSourceJSON.index",
-            "type": "index-pattern"
-        },
-        {
-            "id": "6caf641e-f8fc-4604-853b-51e9da350271",
-            "name": "e9155660-3599-4aea-a920-e440b573a5a4:kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
-            "type": "index-pattern"
+            "id": "entro-5d097b8a-0296-4aa0-9045-557e5499bc8d",
+            "name": "e9155660-3599-4aea-a920-e440b573a5a4:panel_e9155660-3599-4aea-a920-e440b573a5a4",
+            "type": "search"
         },
         {
             "id": "6caf641e-f8fc-4604-853b-51e9da350271",
