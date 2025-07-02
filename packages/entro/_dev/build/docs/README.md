@@ -9,7 +9,7 @@ Use the Entro integration to monitor your exposed secrets and types. Then visual
 For example, if you wanted to see what types of secrets are being exposed more than usual you could look at the audit logs to isolate this information.
 
 ## Data streams
-The Entro Security integration collects logs that help you keep a record of security events related to Non-Human Identities (NHIs) and secrets.
+The Entro Security integration collects logs that help you keep a record of security events related to Non-Human Identities (NHIs) and secrets. Right
 
 **Audit:** Audit allows collecting Audit Log Events
 The Audit data stream collects detailed events about exposed secrets discovered by the Entro platform. This includes the type of secret, where it was found, and the value of the secret itself. See more details in the Logs reference.
