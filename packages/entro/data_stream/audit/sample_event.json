@@ -1,22 +1,22 @@
 {
     "@timestamp": "2025-05-27T20:12:44.000Z",
     "agent": {
-        "ephemeral_id": "d4fc3ff0-6f07-4116-be21-9ee4db39543a",
-        "id": "491f247e-e7b8-467c-978c-f57ee6b65944",
-        "name": "elastic-agent-95605",
+        "ephemeral_id": "2edd925c-7d35-4c62-9ee3-de3e924a9a16",
+        "id": "430bf95a-cf71-4fb6-be61-9eb7470628f4",
+        "name": "elastic-agent-46061",
         "type": "filebeat",
         "version": "8.17.4"
     },
     "data_stream": {
         "dataset": "entro.audit",
-        "namespace": "64882",
+        "namespace": "41903",
         "type": "logs"
     },
     "ecs": {
         "version": "8.11.0"
     },
     "elastic_agent": {
-        "id": "491f247e-e7b8-467c-978c-f57ee6b65944",
+        "id": "430bf95a-cf71-4fb6-be61-9eb7470628f4",
         "snapshot": false,
         "version": "8.17.4"
     },
@@ -27,8 +27,9 @@
         ],
         "created": "2025-05-27T20:12:44.000Z",
         "dataset": "entro.audit",
+        "hash": "P+ftR9PJeiuytETRTqMeXXqfSH4=",
         "id": "105d6a3d-6468-4fcc-994e-f525011c53cf",
-        "ingested": "2025-06-25T14:18:53Z",
+        "ingested": "2025-07-03T20:46:12Z",
         "kind": "event",
         "type": [
             "info"
@@ -37,16 +38,16 @@
     "host": {
         "architecture": "aarch64",
         "containerized": false,
-        "hostname": "elastic-agent-95605",
+        "hostname": "elastic-agent-46061",
         "ip": [
-            "172.21.0.2",
-            "172.19.0.5"
+            "172.19.0.2",
+            "172.18.0.4"
         ],
         "mac": [
-            "BA-5F-DB-BC-50-E9",
-            "FA-9D-2D-1C-25-C1"
+            "CE-FD-5D-F6-E6-A5",
+            "D6-9D-3C-3F-A7-98"
         ],
-        "name": "elastic-agent-95605",
+        "name": "elastic-agent-46061",
         "os": {
             "family": "",
             "kernel": "6.10.14-linuxkit",
@@ -66,12 +67,11 @@
             }
         }
     },
-    "secret": {
-        "line": 878,
-        "type": "GENERIC_CREDS_WINDOWS_PASSWORD",
-        "value": "asd123123"
-    },
     "vulnerability": {
-        "description": "asd123123"
+        "category": [
+            "Secret"
+        ],
+        "description": "GENERIC_CREDS_WINDOWS_PASSWORD",
+        "reference": "asd123123"
     }
 }
