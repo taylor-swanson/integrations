@@ -11,15 +11,11 @@
                 ],
                 "created": "2025-05-27T23:15:28.000Z",
                 "dataset": "entro.audit",
+                "hash": "Ms0P0jOUYfBqcPNu6bDFtYpwyGU=",
                 "id": "dc7b0d91-ad2e-4783-b7bf-a760445a01c6",
                 "kind": "event",
                 "type": [
                     "info"
-                ]
-            },
-            "vulnerability": {
-                "category": [
-                    "Secret"
                 ]
             }
         },
@@ -34,6 +30,7 @@
                 ],
                 "created": "2025-05-27T20:12:44.000Z",
                 "dataset": "entro.audit",
+                "hash": "I5KV/DZJDEHjBf9i6Co/DR00Uq8=",
                 "id": "105d6a3d-6468-4fcc-994e-f525011c53cf",
                 "kind": "event",
                 "type": [
@@ -66,6 +63,7 @@
                 ],
                 "created": "2025-05-27T19:24:58.000Z",
                 "dataset": "entro.audit",
+                "hash": "LaYHEUQfXV52k0nqGVLOW7VbiA0=",
                 "id": "0745ca65-2cee-4d08-99de-75ed5e7a0790",
                 "kind": "event",
                 "type": [
@@ -98,7 +96,8 @@
                 ],
                 "created": "2025-05-28T19:13:58.000Z",
                 "dataset": "entro.audit",
-                "id": "0745ca65-2cee-4d08-99de-75ed5e7a0790",
+                "hash": "SMnSYKRm3JxbFgVgmvHcwof1Y04=",
+                "id": "0745ca65-2cdd-4d08-99de-75ed5e7a0790",
                 "kind": "event",
                 "type": [
                     "info"

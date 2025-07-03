@@ -23,6 +23,7 @@ processors:
       field: vulnerability.category
       value: ["Secret"]
       ignore_empty_value: true
+      if: ctx.secret_type != null
   - set:
       field: vulnerability.description
       copy_from: secret_type
@@ -42,6 +43,14 @@ processors:
   - set:
       field: event.dataset
       value: "entro.audit"
+  - fingerprint:
+        fields:
+            - event.id
+            - vulnerability.reference
+            - date
+        tag: fingerprint_audit
+        target_field: event.hash
+        ignore_missing: true
   - remove:
       field:
         - date
@@ -54,4 +63,3 @@ on_failure:
   - set:
       field: error.message
       value: '{{ _ingest.on_failure_message }}'
-
