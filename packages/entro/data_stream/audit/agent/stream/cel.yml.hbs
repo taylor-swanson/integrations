@@ -16,12 +16,13 @@ resource.timeout: {{http_client_timeout}}
 resource.url: {{url}}
 state:
   api_token: {{api_token}}
+  initial_interval: {{initial_interval}}
 resource.headers:
   Accept:
     - application/json
 program: |
   (
-    state.?cursor.?last_timestamp.orValue(now - duration("1440h"))
+    state.?cursor.?last_timestamp.orValue(now - duration(state.initial_interval))
   ).as(raw_start_value, (
     type(raw_start_value) == string ? timestamp(raw_start_value) : raw_start_value
   ).as(start_time, state.with(

@@ -15,6 +15,14 @@ streams:
         multi: false
         required: true
         show_user: true
+      - name: initial_interval
+        type: text
+        title: Initial Interval
+        description: The amount of time the integration will look back when first initialized. Supported units for this parameter are h/m/s. Default is 60 days (1440h)
+        default: 1440h
+        multi: false
+        required: true
+        show_user: true
       - name: http_client_timeout
         type: text
         title: HTTP Client Timeout
