@@ -28,7 +28,7 @@ program: |
             "GET",
             state.url.trim_right("/") + "/v1/scan/auditLogs" + "?" + {
               "from": [start_time.format("02/01/2006")],
-              "to": ((start_time + duration("24h")).format("02/01/2006") == now.format("02/01/2006")) ? [""] : [(start_time + duration("24h")).format("02/01/2006")],
+              "to": (start_time.format("02/01/2006") == now.format("02/01/2006")) ? [""] : [(start_time + duration("24h")).format("02/01/2006")],
             }.format_query()
           ).with(
             {

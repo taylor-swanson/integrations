@@ -37,11 +37,11 @@ rules:
               },
               {
                 "results": {
-                  "request_id": "122d6a3d-6468-4fcc-994e-f5250dasdacf",
+                  "request_id": "122d6a3d-6468-4fdd-994e-f5250dasdacf",
                   "secrets": [
                     {
                       "secret_type": "GENERIC_CREDS_WINDOWS_PASSWORD",
-                      "exposed_value": "asd123123",
+                      "exposed_value": "tasd121113",
                       "line_number": 878
                     },
                     {
