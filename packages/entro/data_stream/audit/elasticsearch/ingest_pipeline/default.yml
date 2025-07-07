@@ -7,12 +7,21 @@ processors:
   - set:
       field: '@timestamp'
       copy_from: date
+  - fingerprint:
+      fields:
+        - request_id
+        - secret_type
+        - exposed_value
+        - date
+      tag: fingerprint
+      target_field: _id
+      ignore_missing: true
   - set:
       field: event.id
       copy_from: request_id
       ignore_empty_value: true
   - set:
-      field: vulnerability.reference
+      field: vulnerability.value
       copy_from: exposed_value
       ignore_empty_value: true
   - set:
@@ -38,29 +47,8 @@ processors:
       field: event.type
       value: ["info"]
   - set:
-      field: event.created
-      copy_from: date
-  - set:
       field: event.dataset
       value: "entro.audit"
-  - fingerprint:
-        fields:
-            - event.id
-            - vulnerability.reference
-            - date
-        tag: fingerprint_audit_test_env
-        target_field: event.hash
-        if: ctx.tags?.contains('test-env')
-        ignore_missing: true
-  - fingerprint:
-        fields:
-            - event.id
-            - vulnerability.reference
-            - date
-        tag: fingerprint_audit_production
-        target_field: _id
-        if: "!(ctx.tags?.contains('test-env'))"
-        ignore_missing: true
   - remove:
       field:
         - date
