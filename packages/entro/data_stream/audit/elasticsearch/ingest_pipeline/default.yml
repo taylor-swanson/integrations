@@ -48,8 +48,18 @@ processors:
             - event.id
             - vulnerability.reference
             - date
-        tag: fingerprint_audit
+        tag: fingerprint_audit_test_env
         target_field: event.hash
+        if: ctx.tags?.contains('test-env')
+        ignore_missing: true
+  - fingerprint:
+        fields:
+            - event.id
+            - vulnerability.reference
+            - date
+        tag: fingerprint_audit_production
+        target_field: _id
+        if: "!(ctx.tags?.contains('test-env'))"
         ignore_missing: true
   - remove:
       field:

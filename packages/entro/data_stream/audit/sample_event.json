@@ -1,22 +1,22 @@
 {
     "@timestamp": "2025-05-27T20:12:44.000Z",
     "agent": {
-        "ephemeral_id": "2edd925c-7d35-4c62-9ee3-de3e924a9a16",
-        "id": "430bf95a-cf71-4fb6-be61-9eb7470628f4",
-        "name": "elastic-agent-46061",
+        "ephemeral_id": "370ff781-3b0f-4c02-81e8-c871a0388c8f",
+        "id": "2c6d4aa3-8f06-458e-b945-1c2ad0195af2",
+        "name": "elastic-agent-11323",
         "type": "filebeat",
         "version": "8.17.4"
     },
     "data_stream": {
         "dataset": "entro.audit",
-        "namespace": "41903",
+        "namespace": "76472",
         "type": "logs"
     },
     "ecs": {
         "version": "8.11.0"
     },
     "elastic_agent": {
-        "id": "430bf95a-cf71-4fb6-be61-9eb7470628f4",
+        "id": "2c6d4aa3-8f06-458e-b945-1c2ad0195af2",
         "snapshot": false,
         "version": "8.17.4"
     },
@@ -29,7 +29,7 @@
         "dataset": "entro.audit",
         "hash": "P+ftR9PJeiuytETRTqMeXXqfSH4=",
         "id": "105d6a3d-6468-4fcc-994e-f525011c53cf",
-        "ingested": "2025-07-03T20:46:12Z",
+        "ingested": "2025-07-07T12:14:58Z",
         "kind": "event",
         "type": [
             "info"
@@ -38,16 +38,16 @@
     "host": {
         "architecture": "aarch64",
         "containerized": false,
-        "hostname": "elastic-agent-46061",
+        "hostname": "elastic-agent-11323",
         "ip": [
-            "172.19.0.2",
-            "172.18.0.4"
+            "172.20.0.2",
+            "172.18.0.5"
         ],
         "mac": [
-            "CE-FD-5D-F6-E6-A5",
-            "D6-9D-3C-3F-A7-98"
+            "BA-5F-15-72-D0-DD",
+            "BA-64-BD-6A-56-BD"
         ],
-        "name": "elastic-agent-46061",
+        "name": "elastic-agent-11323",
         "os": {
             "family": "",
             "kernel": "6.10.14-linuxkit",
@@ -67,6 +67,10 @@
             }
         }
     },
+    "tags": [
+        "preserve_original_event",
+        "test-env"
+    ],
     "vulnerability": {
         "category": [
             "Secret"

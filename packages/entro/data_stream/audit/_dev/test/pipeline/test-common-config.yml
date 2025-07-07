@@ -1,2 +1,5 @@
 dynamic_fields:
   "event.ingested": ".*"
+fields:
+  tags:
+    - test-env

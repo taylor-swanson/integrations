@@ -8,5 +8,7 @@ data_stream:
     interval: 10s
     preserve_original_event: true
     preserve_duplicate_custom_fields: true
+    tags:
+      - test-env
 assert:
   hit_count: 244
